@@ -77,6 +77,22 @@ You can pass options to `metalsmith-fingerprint-ignore` with the [Javascript API
 }
 ```
 
+### deactivate
+
+`Boolean`: Do not process any files in this run (essentially deactivate the plugin while retaining the metadata). Useful for development when using metalsmith-watch. Default `false`. Optional.
+
+```json
+{
+  "plugins": {
+    "metalsmith-fingerprint-ignore": {
+      "pattern": "css/index.css",
+      "keep": "true",
+	  "deactivate" : "true"
+    }
+  }
+}
+```
+
 ## Origins
 
 Metalsmith fingerprint does not discard the original file after fingerprinting. So when fingerprinting a large collection of files you'll have to manually [ignore](https://github.com/segmentio/metalsmith-ignore) them all. Unfortunately the only predictable difference between the original and the fingerprinted file is the dash before the fingerprint.

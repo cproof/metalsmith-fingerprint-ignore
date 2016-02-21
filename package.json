@@ -4,6 +4,7 @@
   "description": "A fork of metalsmith-fingerprint that discards the original file",
   "keywords": [
     "metalsmith",
+	"metalsmith-watch",
     "javascript",
     "css",
     "cache",
